@@ -1,16 +1,26 @@
-# React + Vite
+# Speak Ease (Duolingo Clone)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Speak Ease is a language learning platform built on the MERN stack (MongoDB, Express, React, Node.js). 
 
-Currently, two official plugins are available:
+It features an extremely polished, high-contrast, premium "Neo-Brutalist Gamified" frontend to provide an exciting and dynamic environment for students to learn new languages.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Key Features
 
-## React Compiler
+### Implemented Core Features
+- ✅ **User Authentication:** Secure JWT-based Login and Registration.
+- ✅ **Language Selection:** Browse and select languages to learn.
+- ✅ **Lesson Modules:** Navigate structured learning pathways.
+- ✅ **Quizzes & Vocabulary:** Interactive flashcard and multiple-choice quizzes with instant visual feedback.
+- ✅ **Progress Tracking:** Saves XP and streak day tracking to the database.
+- ✅ **Custom UI/UX:** A bespoke CSS-variables design system mapping vivid colors to bouncy animations that avoids looking generic.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Advanced Features (To Build)
+- ❌ **Admin Dashboard:** A panel for administrators to visually manage courses, lessons, and questions.
+- ❌ **Leaderboard System:** Compare your XP and lesson streak with your friends globally.
+- ❌ **Audio & Pronunciation:** Speech Recognition and interactive listening exercises.
+- ❌ **AI-Based Recommendations:** Generative dynamic questions based on areas where the user struggles.
+- ❌ **Multi-language Interface:** Translating the actual website interface for different native tongues.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Please refer to the [setup.md](setup.md) guide for cross-platform visual instructions on how to boot up this project!

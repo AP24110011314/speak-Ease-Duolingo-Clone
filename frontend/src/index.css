@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+  /* Extreme Neo-Brutalist Gamified Palette */
+  --bg-primary: #FFFAEE; /* Warm off-white */
+  --bg-secondary: #FFEEA9; /* Soft yellow */
+  
+  --accent-lime: #A3FF65; 
+  --accent-blue: #5EBFFF;
+  --accent-peach: #FF8F78;
+  --accent-purple: #C28FFF;
+
+  --text-dark: #121212;
+  --text-light: #FFFFFF;
+
+  --border-thick: 4px solid #121212;
+  --radius-chunky: 16px;
+  --radius-pill: 9999px;
+
+  --shadow-bouncy: 6px 6px 0px #121212;
+  --shadow-bouncy-hover: 2px 2px 0px #121212;
+
+  --transition-bounce: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Base Utility Classes for Gamified UI */
+.neo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.neo-box {
+  background: white;
+  border: var(--border-thick);
+  border-radius: var(--radius-chunky);
+  box-shadow: var(--shadow-bouncy);
+  padding: 2rem;
+  transition: var(--transition-bounce);
+}
+
+.neo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--accent-lime);
+  color: var(--text-dark);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: var(--border-thick);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-bouncy);
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-bounce);
+  text-transform: uppercase;
+}
+
+.neo-btn:active, .neo-btn.active-press {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px #121212;
+}
+
+.neo-btn-secondary {
+  background: var(--accent-blue);
+}
+
+.neo-btn-danger {
+  background: var(--accent-peach);
+}
+
+.neo-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  border: var(--border-thick);
+  border-radius: var(--radius-pill);
+  background: white;
+  transition: var(--transition-bounce);
+}
+
+.neo-input:focus {
+  outline: none;
+  box-shadow: 4px 4px 0px var(--accent-purple);
+  transform: translate(-2px, -2px);
+}
+
+/* Animations */
+@keyframes popIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pop {
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slide {
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+/* Grid Layouts */
+.neo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
