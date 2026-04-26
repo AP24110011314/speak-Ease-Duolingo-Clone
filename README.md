@@ -22,6 +22,24 @@ The application features a premium, high-contrast **"Neo-Brutalist Gamified"** f
 
 ---
 
+## Demo Videos
+
+### 1. Speak Ease UI Demo
+Watch the comprehensive demonstration of the user interface, covering language selection, interactive neo-brutalist quizzes, animations, and the admin dashboard.
+
+<video src="frontend/public/videos/Demo_UI.mp4" controls="controls" style="max-width: 100%; border-radius: 8px;">
+  Your browser does not support the video tag. <a href="frontend/public/videos/Demo_UI.mp4">Click here to watch the UI Demo</a>
+</video>
+
+### 2. Codebase Explanation
+A detailed walkthrough of the internal MERN stack architecture, backend logic, and frontend design system.
+
+<video src="frontend/public/videos/Codebase_Explain.mp4" controls="controls" style="max-width: 100%; border-radius: 8px;">
+  Your browser does not support the video tag. <a href="frontend/public/videos/Codebase_Explain.mp4">Click here to watch the Codebase Explanation</a>
+</video>
+
+---
+
 ## Tech Stack
 
 **Frontend**
