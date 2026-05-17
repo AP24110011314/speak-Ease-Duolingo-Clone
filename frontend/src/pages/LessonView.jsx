@@ -15,7 +15,7 @@ const LessonView = () => {
             return;
         }
         
-        fetch(`http://localhost:8000/api/courses/lessons/${languageId}`)
+        fetch(`${import.meta.env.VITE_API_URL}/api/courses/lessons/${languageId}`)
             .then(res => res.json())
             .then(data => setLessons(data))
             .catch(err => console.error(err));

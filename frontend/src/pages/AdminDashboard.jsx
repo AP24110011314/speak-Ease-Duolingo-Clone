@@ -35,7 +35,7 @@ const AdminDashboard = () => {
     const authFetch = async (url, options = {}) => {
         const userInfoStr = localStorage.getItem('userInfo');
         const token = userInfoStr ? JSON.parse(userInfoStr).token : null;
-        const res = await fetch(`http://localhost:8000/api/courses${url}`, {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/courses${url}`, {
             ...options,
             headers: {
                 'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ const AdminDashboard = () => {
     const fetchLanguages = async () => {
         setLoading(true);
         try {
-            const res = await fetch('http://localhost:8000/api/courses/languages');
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/courses/languages`);
             setLanguages(await res.json());
         } catch (err) { console.error(err); }
         setLoading(false);
@@ -58,14 +58,14 @@ const AdminDashboard = () => {
 
     const fetchLessons = async (langId) => {
         try {
-            const res = await fetch(`http://localhost:8000/api/courses/lessons/${langId}`);
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/courses/lessons/${langId}`);
             setLessons(await res.json());
         } catch (err) { console.error(err); }
     };
 
     const fetchQuizzes = async (lessonId) => {
         try {
-            const res = await fetch(`http://localhost:8000/api/courses/quizzes/${lessonId}`);
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/courses/quizzes/${lessonId}`);
             setQuizzes(await res.json());
         } catch (err) { console.error(err); }
     };

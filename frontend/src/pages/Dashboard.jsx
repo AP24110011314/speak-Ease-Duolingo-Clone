@@ -17,11 +17,11 @@ const Dashboard = () => {
         
         const fetchData = async () => {
             try {
-                const langRes = await fetch('http://localhost:8000/api/courses/languages');
+                const langRes = await fetch(`${import.meta.env.VITE_API_URL}/api/courses/languages`);
                 const langData = await langRes.json();
                 setLanguages(langData);
 
-                const progRes = await fetch('http://localhost:8000/api/courses/progress', {
+                const progRes = await fetch(`${import.meta.env.VITE_API_URL}/api/courses/progress`, {
                     headers: { 'Authorization': `Bearer ${user.token}` }
                 });
                 if (progRes.ok) {
