@@ -9,6 +9,7 @@ The application features a premium, high-contrast **"Neo-Brutalist Gamified"** f
 ---
 
 ## Table of Contents
+- [🚀 Live Demo](#-live-demo)
 - [Tech Stack](#tech-stack)
 - [Key Features](#key-features)
   - [Implemented Core Features](#implemented-core-features)
@@ -21,6 +22,16 @@ The application features a premium, high-contrast **"Neo-Brutalist Gamified"** f
 - [Testing](#testing)
 
 ---
+
+## 🚀 Live Demo
+
+**[https://speak-ease-duolingo-clone-frontend.vercel.app/](https://speak-ease-duolingo-clone-frontend.vercel.app/)**
+
+| Layer | Platform | URL |
+|---|---|---|
+| Frontend | Vercel | [speak-ease-duolingo-clone-frontend.vercel.app](https://speak-ease-duolingo-clone-frontend.vercel.app/) |
+| Backend | Render | [speak-ease-duolingo-clone-backend.onrender.com](https://speak-ease-duolingo-clone-backend.onrender.com) |
+
 
 ## Demo Videos
 
