@@ -19,7 +19,7 @@ const QuizView = () => {
             return;
         }
 
-        fetch(`http://localhost:8000/api/courses/quizzes/${lessonId}`)
+        fetch(`${import.meta.env.VITE_API_URL}/api/courses/quizzes/${lessonId}`)
             .then(res => res.json())
             .then(data => setQuizzes(data))
             .catch(err => console.error(err));
@@ -48,7 +48,7 @@ const QuizView = () => {
     const finishQuiz = async (finalScore) => {
         setIsFinished(true);
         try {
-            await fetch('http://localhost:8000/api/courses/progress', {
+            await fetch(`${import.meta.env.VITE_API_URL}/api/courses/progress`, {
                 method: 'POST',
                 headers: { 
                     'Content-Type': 'application/json',

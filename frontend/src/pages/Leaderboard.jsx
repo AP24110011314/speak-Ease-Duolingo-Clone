@@ -25,7 +25,7 @@ const Leaderboard = () => {
         setLoading(true);
         try {
             const endpoint = view === 'global' ? '/api/users/leaderboard' : '/api/users/leaderboard/friends';
-            const res = await fetch(`http://localhost:8000${endpoint}`, {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}${endpoint}`, {
                 headers: { 'Authorization': `Bearer ${user.token}` }
             });
             const data = await res.json();
@@ -42,7 +42,7 @@ const Leaderboard = () => {
         setSearchQuery(query);
         if (query.length > 2) {
             try {
-                const res = await fetch(`http://localhost:8000/api/users/search?keyword=${query}`, {
+                const res = await fetch(`${import.meta.env.VITE_API_URL}/api/users/search?keyword=${query}`, {
                     headers: { 'Authorization': `Bearer ${user.token}` }
                 });
                 const data = await res.json();
@@ -57,7 +57,7 @@ const Leaderboard = () => {
 
     const followUser = async (targetId) => {
         try {
-            const res = await fetch(`http://localhost:8000/api/users/follow/${targetId}`, {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/users/follow/${targetId}`, {
                 method: 'POST',
                 headers: { 'Authorization': `Bearer ${user.token}` }
             });
@@ -73,7 +73,7 @@ const Leaderboard = () => {
 
     const unfollowUser = async (targetId) => {
         try {
-            const res = await fetch(`http://localhost:8000/api/users/unfollow/${targetId}`, {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/users/unfollow/${targetId}`, {
                 method: 'POST',
                 headers: { 'Authorization': `Bearer ${user.token}` }
             });

@@ -12,7 +12,10 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: process.env.FRONTEND_URL?.replace(/\/$/, ''),
+    credentials: true
+}));
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
@@ -23,7 +26,7 @@ app.get('/', (req, res) => {
     res.send('Speak Ease API is running...');
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 if (process.env.NODE_ENV !== 'test') {
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 }
